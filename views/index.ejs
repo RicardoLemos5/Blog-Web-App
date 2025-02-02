@@ -1,0 +1,48 @@
+<%- include("partials/header.ejs") %>
+
+<!-- Create New Post -->
+<section id="create-post">
+  <div class="px-4 py-5 text-center">
+    <h1 id="create-post-title">Create a New Post</h1>
+    <hr />
+    <div class="form-container">
+      <form class="input-form" action="/submit" method="POST">
+        <!-- Title Input -->
+        <div class="form-floating mb-3">
+          <input type="text" class="input-title form-control" name="title" id="floatingInput" required>
+          <label for="floatingInput">Enter your title</label>
+        </div>
+
+        <!-- Content Input -->
+        <div class="form-floating">
+          <textarea class="input-content form-control" name="content" id="floatingTextarea" required></textarea>
+          <label for="floatingTextarea">Write your post here...</label>
+        </div>
+        
+        <!-- Submit Button -->
+        <button id="create-post-button" class="btn btn-dark" type="submit">Post</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Recent Posts -->
+<section id="recent-posts">
+  <h1 id="recent-posts-title">Recent Posts</h1>
+  <hr />
+  <!-- Show Posts -->
+  <% if (locals.posts) { %> 
+      <% if (locals.postHTML) { %>
+        <!-- Post -->
+        <div class="posts"><%- postHTML %></div>
+      <%} else if (locals.editForm) { %>      
+        <!-- Edit Form -->
+        <%- editForm %>
+      <% } else { %>
+        <h2 id="no-posts-text">No posts yet. Be the first one to post!</h2>
+      <% } %>
+  <% } %>
+</section>
+<% if (locals.year) { %>
+  <%- include("partials/footer.ejs"); %>
+<% } %>
