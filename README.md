@@ -17,7 +17,6 @@ Posts are listed in order of the most recent.
 
 - **Frontend**: HTML, CSS, Bootstrap.
 - **Backend**: Node.js, Express.js, EJS, Axios.
-- **External APIs**: Astronomy Picture of the Day (APOD) API
 <br />
 
 
