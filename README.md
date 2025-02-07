@@ -45,3 +45,6 @@ Posts are listed in order of the most recent.
 
 ## Website link
 https://blog-web-app-lsqz.onrender.com/
+<br />
+<br />
+Note: Webiste takes 1-2 mins to "wake up" uppon request.
