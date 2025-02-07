@@ -35,7 +35,7 @@ Posts are listed in order of the most recent.
    ```
 3. Run server
    ```sh
-   node index.js
+   nodemon index.js
    ```
 4. Open your browser and navigate to:
    ```sh
